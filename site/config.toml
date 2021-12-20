@@ -1,9 +1,17 @@
-baseurl = "/"
-languageCode = "en-us"
-languageLang = "en"
-title = "Homepage"
+baseURL = "http://example.org/"
+title = "Alpha Church"
 
-# RSS, categories and tags disabled for an easy start
-# See configuration options for more details: 
-# https://gohugo.io/getting-started/configuration/#toml-configuration
-disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.82.0"
+
+[taxonomies]
+  tag = "tags"
+  preacher = "preachers"
+  series = "series"
+
+#This is suggested default minification since Hugo 0.84.0 and later has a minification library that breaks the JS for plyr.io
+[minify]
+  minifyOutput = true
+  disableJS = true

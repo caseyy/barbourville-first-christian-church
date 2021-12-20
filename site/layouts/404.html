@@ -1,6 +1,12 @@
 {{ define "main" }}
 
-<h1>Nothing Here...</h1>
-<h3><a href="{{ "/" | relURL }}">Go Home</a></h3>
-
+  {{ "<!-- Main -->" | safeHTML }}
+  <section id="main" class="container">
+    <header>
+      <h2>404 Not Found</h2>
+    </header>
+    <div class="box">
+      Oops, something went wrong. Time to go <a href="/">home</a>.
+    </div>
+  </section>
 {{ end }}
